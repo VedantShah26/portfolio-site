@@ -11,8 +11,9 @@ export default function Hero() {
           Data Analyst | Python Developer | Machine Learning Enthusiast
         </h2>
         <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-2xl mx-auto">
-          Transforming complex data into actionable insights. Specializing in data analysis, 
-          visualization, and machine learning solutions to drive business growth and innovation.
+          Transforming complex data into actionable insights. Specializing in ETL pipelines, 
+          data analysis, and business intelligence solutions. Proficient in Python, SQL, 
+          and data visualization tools to drive business growth and innovation.
         </p>
         <div className="flex gap-4 justify-center">
           <Link 

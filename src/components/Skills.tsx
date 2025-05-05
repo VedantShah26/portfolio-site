@@ -1,46 +1,55 @@
 const skills = [
   {
     category: "Programming Languages",
-    items: ["Python", "SQL", "R", "JavaScript"],
+    items: ["R", "Python", "SQL", "HTML", "CSS", "JavaScript", "NodeJS", "C", "Java", "Git"],
+    icon: "💻"
   },
   {
-    category: "Data Analysis",
-    items: ["Pandas", "NumPy", "SciPy", "Statistics"],
+    category: "Data Science Libraries",
+    items: ["NumPy", "Pandas", "PySpark", "Matplotlib", "Scikit-Learn", "TensorFlow", "Seaborn", "ggplot2"],
+    icon: "📊"
   },
   {
-    category: "Data Visualization",
-    items: ["Tableau", "Matplotlib", "Seaborn", "Plotly"],
+    category: "Databases",
+    items: ["MySQL", "PL/SQL", "Redis", "Neo4j", "SQLite"],
+    icon: "🗄️"
   },
   {
-    category: "Machine Learning",
-    items: ["Scikit-learn", "TensorFlow", "NLP", "Deep Learning"],
-  },
-  {
-    category: "Database",
-    items: ["MySQL", "MongoDB", "PostgreSQL", "Data Warehousing"],
-  },
-  {
-    category: "Tools & Technologies",
-    items: ["Git", "Docker", "AWS", "Jupyter Notebooks"],
-  },
+    category: "Cloud & Tools",
+    items: ["Azure", "GCP", "Power BI", "Tableau", "Looker", "SAS"],
+    icon: "☁️"
+  }
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">Skills & Expertise</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">{skill.category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {skill.items.map((item, itemIndex) => (
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+            Technical Skills
+          </h2>
+          <p className="text-gray-400 text-lg">
+            A comprehensive toolkit for data analysis and software development
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {skills.map((skillGroup, index) => (
+            <div 
+              key={index} 
+              className="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="flex items-center mb-6">
+                <span className="text-4xl mr-4">{skillGroup.icon}</span>
+                <h3 className="text-2xl font-semibold text-white">{skillGroup.category}</h3>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {skillGroup.items.map((skill, i) => (
                   <span
-                    key={itemIndex}
-                    className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm"
+                    key={i}
+                    className="px-4 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-blue-400 rounded-full text-sm border border-blue-500/20 hover:border-blue-500/40 transition-colors"
                   >
-                    {item}
+                    {skill}
                   </span>
                 ))}
               </div>

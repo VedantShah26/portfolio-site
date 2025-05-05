@@ -1,27 +1,29 @@
 const experiences = [
   {
-    company: "Your Company Name",
+    company: "OnTrackNorthAmerica",
     role: "Data Analyst",
-    duration: "2023 - Present",
+    duration: "Feb 2025 - Present",
     description: [
-      "Analyzed large datasets to identify trends and patterns, leading to a 20% increase in operational efficiency",
-      "Developed interactive dashboards using Tableau and Python for real-time business insights",
-      "Collaborated with cross-functional teams to implement data-driven solutions",
-      "Built predictive models using machine learning to forecast business metrics"
+      "Structured scalable ETL pipelines using Python and SQL Alchemy to ingest and integrate large volumes of logistics and regulatory data, improving processing efficiency by 70%",
+      "Formulated comprehensive data transformation workflows with Pandas to clean, normalize, and validate multi-source datasets",
+      "Performed in-depth exploratory data analysis using Python (NumPy, Pandas) to identify inefficiencies in supply chain routes, leading to 30% improvement in report turnaround time",
+      "Assembled Power BI dashboards to monitor KPIs such as emissions, route delays, and regulatory compliance, contributing to 20% increase in project ROI"
     ],
-    skills: ["Python", "Tableau", "SQL", "Machine Learning", "Data Visualization"]
+    skills: ["Python", "SQL", "ETL", "Power BI", "Data Analysis", "Pandas", "NumPy"],
+    icon: "📈"
   },
   {
-    company: "Previous Company",
-    role: "Junior Data Analyst",
-    duration: "2022 - 2023",
+    company: "CSS CORP PVT LTD",
+    role: "Data Analyst",
+    duration: "Jun 2021 - Jul 2022",
     description: [
-      "Processed and cleaned large datasets using Python and SQL",
-      "Created automated data pipelines to streamline reporting processes",
-      "Developed data visualizations to communicate insights to stakeholders",
-      "Assisted in building machine learning models for business predictions"
+      "Optimized advanced SQL queries to cleanse and aggregate operational data, improving reporting accuracy and reducing query execution times by 40%",
+      "Implemented automated data validation workflows leveraging SQL rule engines, resulting in 35% increase in ETL process accuracy",
+      "Conducted statistical analysis on A/B testing datasets using Python to evaluate web engagement metrics, driving 20% uplift in user retention",
+      "Created Tableau dashboards to deliver real-time visibility into product KPIs and experimentation results"
     ],
-    skills: ["Python", "Pandas", "SQL", "Data Analysis", "Excel"]
+    skills: ["SQL", "Python", "Tableau", "Data Analysis", "ETL", "A/B Testing"],
+    icon: "🔍"
   }
 ];
 
@@ -29,27 +31,40 @@ export default function WorkExperience() {
   return (
     <section id="experience" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">Work Experience</h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+            Work Experience
+          </h2>
+          <p className="text-gray-400 text-lg">
+            Professional journey and key achievements
+          </p>
+        </div>
         <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg p-8 hover:bg-gray-700 transition-colors">
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-                <div>
-                  <h3 className="text-2xl font-semibold text-white">{exp.role}</h3>
-                  <p className="text-xl text-blue-400">{exp.company}</p>
+            <div 
+              key={index} 
+              className="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center">
+                  <span className="text-4xl mr-4">{exp.icon}</span>
+                  <div>
+                    <h3 className="text-2xl font-semibold text-white">{exp.role}</h3>
+                    <p className="text-xl text-blue-400">{exp.company}</p>
+                  </div>
                 </div>
-                <span className="text-gray-400 mt-2 md:mt-0">{exp.duration}</span>
+                <span className="text-gray-400">{exp.duration}</span>
               </div>
-              <ul className="list-disc list-inside space-y-2 mb-6 text-gray-300">
+              <ul className="list-disc list-inside space-y-3 mb-6 text-gray-300">
                 {exp.description.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <li key={i} className="hover:text-white transition-colors">{item}</li>
                 ))}
               </ul>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3 border-t border-gray-700 pt-4">
                 {exp.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm"
+                    className="px-4 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-blue-400 rounded-full text-sm border border-blue-500/20 hover:border-blue-500/40 transition-colors"
                   >
                     {skill}
                   </span>
