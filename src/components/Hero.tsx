@@ -11,20 +11,21 @@ export default function Hero() {
           Data Analyst | Python Developer | Machine Learning Enthusiast
         </h2>
         <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-2xl mx-auto">
-          Transforming data into actionable insights. Specializing in data analysis, visualization, and machine learning solutions.
+          Transforming complex data into actionable insights. Specializing in data analysis, 
+          visualization, and machine learning solutions to drive business growth and innovation.
         </p>
         <div className="flex gap-4 justify-center">
           <Link 
-            href="#projects"
+            href="#experience"
             className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
           >
-            View Projects
+            View Experience
           </Link>
           <Link 
-            href="#contact"
+            href="#projects"
             className="px-8 py-3 border border-blue-600 hover:bg-blue-600 rounded-lg font-semibold transition-colors"
           >
-            Contact Me
+            View Projects
           </Link>
         </div>
       </div>

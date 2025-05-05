@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import WorkExperience from '@/components/WorkExperience';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
@@ -9,6 +10,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       <Hero />
       <About />
+      <WorkExperience />
       <Projects />
       <Skills />
       <Contact />
